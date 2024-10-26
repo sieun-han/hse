@@ -18,4 +18,11 @@ ground = Entity(
     collider='box'
 )
 
+player = PlatformerController2d(
+    position=(-15, -5),
+    color=color.white,
+    scale=1,
+    max_jumps=2
+)
+
 app.run()
