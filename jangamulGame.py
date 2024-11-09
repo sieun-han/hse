@@ -33,15 +33,37 @@ background = Entity(
     z=2
 )
 
-spikes = []
-
 for i in range(10):
-    spike = Entity(
+    obstacle = Entity(
         position=(random.randint(-10, 10), -5),
         model='cube',
         color=color.white,
         scale=1
-
     )
+
+class Exit(Entity):
+    def __init__(self, x, z):
+        super().__init__(
+            model='cube',
+            color=color.green,
+            scale=(0.1, 0.1, 0.1),
+            position=(x, 0, z)
+            )
+self.player = player #외부 플레이어의 정보를 Exit 클래스의 self.player 변수에 저장
+
+def update(self):
+    self.playerCollision()
+
+def playerCollision(self, player):
+ if player.intersects(self).hit:
+            return True  # 충돌함
+            return False  # 충돌하지 않음
+
+def update(self):
+        if player.intersects(self).hit:
+            print("게임 오버! 장애물에 닿았습니다.")
+            Text(text="게임 오버", origin=(0, 0), scale=2)
+            invoke(application.quit, delay=2)  # 2초 뒤에 게임 종료
+
 
 app.run()
