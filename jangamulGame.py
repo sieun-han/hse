@@ -54,11 +54,6 @@ self.player = player #외부 플레이어의 정보를 Exit 클래스의 self.pl
 def update(self):
     self.playerCollision()
 
-def playerCollision(self, player):
- if player.intersects(self).hit:
-            return True  # 충돌함
-            return False  # 충돌하지 않음
-
 def update(self):
         if player.intersects(self).hit:
             print("게임 오버! 장애물에 닿았습니다.")
