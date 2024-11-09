@@ -33,6 +33,15 @@ background = Entity(
     z=2
 )
 
+spikes = []
 
+for i in range(10):
+    spike = Entity(
+        position=(random.randint(-10, 10), -5),
+        model='cube',
+        color=color.white,
+        scale=1
+
+    )
 
 app.run()
