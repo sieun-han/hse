@@ -64,6 +64,4 @@ def update(self):
             print("게임 오버! 장애물에 닿았습니다.")
             Text(text="게임 오버", origin=(0, 0), scale=2)
             invoke(application.quit, delay=2)  # 2초 뒤에 게임 종료
-
-
 app.run()
